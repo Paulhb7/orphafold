@@ -38,9 +38,7 @@ The system generates a full structural report including interactive 3D protein v
 The core of OrphaFold is a **Multi-Agent Orchestration layer** built on **Gemini 3**. 
 - **The Engine:** We utilized Gemini’s deep reasoning and large context window to manage parallel API enrichment from Orphanet, UniProt, and NCBI.
 - **The Frontend:** Built with React/Vite, we implemented a custom **Structural Proteomics Lab** using 3D rendering for AlphaFold pdb models.
-- **Agentic Logic:** We designed a "Synthetic Researcher" workflow where agents don't just fetch data, but cross-reference it. For example, verifying if a mutation found in ClinVar aligns with a functional domain identified in UniProt using a weighted scoring logic:
-  $$S = \sum_{i=1}^{n} w_i \cdot \text{conf}(i)$$ 
-  where $S$ is the hypothesis confidence score and $\text{conf}(i)$ represents the pLDDT or clinical significance values.
+- **Orchestrated Agentic Reasoning:** We designed a multi-layered workflow where agents autonomously cross-validate clinical registries with structural proteomic data, transforming raw information into synthesized discovery paths. For example, the system correlates pathogenic variants from ClinVar with specific functional domains in UniProt to assess candidate confidence based on pLDDT and structural significance.
 
 ### Challenges we ran into
 The biggest challenge was **Data Synthesis latency**. Orchestrating 4 agents while querying multiple REST APIs simultaneously requires precise prompt engineering to prevent "hallucinations" in a medical context. We solved this by implementing a **"Pre-Flight" layer** that fetches raw structural data first, feeding it into Gemini as a grounded context, ensuring that every hypothesis is backed by a verified UniProt ID or PubMed citation.

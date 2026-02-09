@@ -11,7 +11,7 @@ Multi-agent architecture • Biomedical APIs • Comprehensive reports
 [![Gemini 3](https://img.shields.io/badge/Google-Gemini_3-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![AlphaFold](https://img.shields.io/badge/AlphaFold-DB-FF6F00?style=for-the-badge)](https://alphafold.ebi.ac.uk/)
+[![AlphaFold](https://img.shields.io/badge/Data-AlphaFold_DB-FF6F00?style=for-the-badge)](https://alphafold.ebi.ac.uk/)
 [![Orphanet](https://img.shields.io/badge/Data-Orphanet-blue?style=for-the-badge)](https://www.orpha.net/)
 [![PubMed](https://img.shields.io/badge/Data-PubMed-red?style=for-the-badge)](https://pubmed.ncbi.nlm.nih.gov/)
 [![ClinVar](https://img.shields.io/badge/Data-ClinVar-green?style=for-the-badge)](https://www.ncbi.nlm.nih.gov/clinvar/)
@@ -20,17 +20,6 @@ Multi-agent architecture • Biomedical APIs • Comprehensive reports
 
 </div>
 
-## 📸 Interface Preview
-
-<div align="center">
-
-| Search & Home | Biological Insights (AlphaFold) |
-|:---:|:---:|
-| <img src="documentation/home.png" width="400" /> | <img src="documentation/report-bio1.png" width="400" /> |
-| **Hypothesis Lab (Repurposing)** | **Scientific Research Tracking** |
-| <img src="documentation/report-hypothesis-lab.png" width="400" /> | <img src="documentation/report-research.png" width="400" /> |
-
-</div>
 
 # OrphaFold: Deep Structural Search for Orphan Diseases
 
@@ -47,6 +36,22 @@ OrphaFold serves as a **technical demonstrator** to bridge this gap through **St
 - **Accelerating Synthesis**: Compressing literature review by orchestrating specialized agents.
 - **Mechanics-First**: Using protein structures (AlphaFold) as a key baseline for discovery.
 - **Democratizing Repurposing**: Identifying hidden connections between existing drugs and rare proteins.
+
+## 📸 Interface Preview
+
+<div align="center">
+
+| 🏠 Search & Home | 🧪 Biological Insights |
+|:---:|:---:|
+| <img src="documentation/home.png" width="400" /> | <img src="documentation/report-bio1.png" width="400" /> |
+| **💊 Hypothesis Lab** | **🔬 Research Tracking** |
+| <img src="documentation/report-hypothesis-lab.png" width="400" /> | <img src="documentation/report-research.png" width="400" /> |
+| **👁️ Project Vision** | **🧬 Structural Analysis** |
+| <img src="documentation/vision.png" width="400" /> | <img src="documentation/report-bio2.png" width="400" /> |
+| **🧪 Cross-Disease Insights** | **📚 Bibliography Management** |
+| <img src="documentation/report-hypothesis-lab2.png" width="400" /> | <img src="documentation/report-biblio.png" width="400" /> |
+
+</div>
 
 ## 🧬 The Agent Architecture
 
