@@ -11,9 +11,24 @@ Multi-agent architecture • Biomedical APIs • Comprehensive reports
 [![Gemini 3](https://img.shields.io/badge/Google-Gemini_3-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![AlphaFold](https://img.shields.io/badge/Structural-AlphaFold-FF6F00?style=for-the-badge)](https://alphafold.ebi.ac.uk/)
+[![AlphaFold](https://img.shields.io/badge/AlphaFold-DB-FF6F00?style=for-the-badge)](https://alphafold.ebi.ac.uk/)
+[![Orphanet](https://img.shields.io/badge/Data-Orphanet-blue?style=for-the-badge)](https://www.orpha.net/)
+[![PubMed](https://img.shields.io/badge/Data-PubMed-red?style=for-the-badge)](https://pubmed.ncbi.nlm.nih.gov/)
+[![ClinVar](https://img.shields.io/badge/Data-ClinVar-green?style=for-the-badge)](https://www.ncbi.nlm.nih.gov/clinvar/)
 
 [Quick Start](#-installation) • [Architecture](documentation/architecture.md) • [Devpost Submission](Devpost.md)
+
+</div>
+
+## 📸 Interface Preview
+
+<div align="center">
+
+| Search & Home | Biological Insights (AlphaFold) |
+|:---:|:---:|
+| <img src="documentation/home.png" width="400" /> | <img src="documentation/report-bio1.png" width="400" /> |
+| **Hypothesis Lab (Repurposing)** | **Scientific Research Tracking** |
+| <img src="documentation/report-hypothesis-lab.png" width="400" /> | <img src="documentation/report-research.png" width="400" /> |
 
 </div>
 
