@@ -161,25 +161,31 @@ interface ScientificBackgroundProps {
   onGenerateRepurposing: () => void;
 }
 
-const ScientificBackground: React.FC<ScientificBackgroundProps> = ({ insight, loading, onGenerateRepurposing }) => {
+export const ScientificCanvas: React.FC = () => {
+  return (
+    <div className="absolute inset-0 z-0">
+      <Suspense fallback={null}>
+        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 15], fov: 50 }}>
+          <ambientLight intensity={1.5} />
+          <pointLight position={[10, 10, 10]} intensity={1} color="#4285F4" />
+          <pointLight position={[-10, -10, 10]} intensity={1} color="#00BFA5" />
+
+          <OrganicShape position={[-6, 4, -5]} color="#4285F4" speed={1} distort={0.4} radius={2.5} />
+          <OrganicShape position={[7, -5, -2]} color="#7B68EE" speed={0.8} distort={0.5} radius={3.2} />
+          <OrganicShape position={[2, 6, -8]} color="#00BFA5" speed={1.2} distort={0.3} radius={2} />
+
+          <MolecularLink />
+          <Particles count={60} />
+        </Canvas>
+      </Suspense>
+    </div>
+  );
+};
+
+export const ScientificBackground: React.FC<ScientificBackgroundProps> = ({ insight, loading, onGenerateRepurposing }) => {
   return (
     <div className="relative w-full min-h-[600px] rounded-[32px] overflow-hidden border border-slate-200 bg-slate-900">
-      <div className="absolute inset-0 z-0">
-        <Suspense fallback={null}>
-          <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 15], fov: 50 }}>
-            <ambientLight intensity={1.5} />
-            <pointLight position={[10, 10, 10]} intensity={1} color="#4285F4" />
-            <pointLight position={[-10, -10, 10]} intensity={1} color="#00BFA5" />
-
-            <OrganicShape position={[-6, 4, -5]} color="#4285F4" speed={1} distort={0.4} radius={2.5} />
-            <OrganicShape position={[7, -5, -2]} color="#7B68EE" speed={0.8} distort={0.5} radius={3.2} />
-            <OrganicShape position={[2, 6, -8]} color="#00BFA5" speed={1.2} distort={0.3} radius={2} />
-
-            <MolecularLink />
-            <Particles count={60} />
-          </Canvas>
-        </Suspense>
-      </div>
+      <ScientificCanvas />
 
       <div className="relative z-10 p-10 h-full flex flex-col items-center justify-center text-center space-y-8">
         <div className="max-w-2xl space-y-6 bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 shadow-2xl">
