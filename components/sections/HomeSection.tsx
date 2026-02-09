@@ -185,7 +185,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
                             <div className="bg-white/5 px-6 py-3 border-b border-white/5 flex items-center justify-between">
                                 <div className="flex items-center gap-2 text-[#00f5d4]">
                                     <div className="w-2 h-2 rounded-full bg-[#00f5d4] animate-pulse" />
-                                    <span className="text-[10px] font-black uppercase tracking-widest">Active Discovery Stream</span>
+                                    <span className="text-[10px] font-black uppercase tracking-widest">Active Discovery Stream - Wait during 2-3 mins</span>
                                 </div>
                                 <div className="flex gap-1.5">
                                     <div className="w-2 h-2 rounded-full bg-red-500/50" />

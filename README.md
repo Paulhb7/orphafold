@@ -20,6 +20,7 @@ Multi-agent architecture • Biomedical APIs • Comprehensive reports
 
 </div>
 
+[![Demo Video](https://img.youtube.com/vi/W7CqQGy8dt0/maxresdefault.jpg)](https://youtu.be/W7CqQGy8dt0)
 
 # OrphaFold: Deep Structural Search for Orphan Diseases
 
@@ -66,7 +67,7 @@ OrphaFold orchestrates a 4-agent pipeline to analyze orphan pathologies from mul
 
 ### 2. 🧪 Bio-Mechanism Agent
 *   **Purpose:** Uncovers the molecular pathophysiology and structural machinery.
-*   **APIs & Tools:** UniProt, NCBI Gene, ClinVar, AlphaFold DB (3D Viewer).
+*   **APIs & Tools:** UniProt, NCBI Gene, ClinVar, AlphaFold DB.
 *   **Output:** Target proteins, functional domains, pLDDT confidence, and druggability assessments.
 
 ### 3. 🔬 Discovery Agent
@@ -126,3 +127,14 @@ OrphaFold orchestrates a 4-agent pipeline to analyze orphan pathologies from mul
 ## 🌍 Deployment
 
 This project is optimized for deployment on **Google AI Studio**.
+
+---
+
+## 🚀 Next Steps
+
+Our journey from discovery to impact continues with the following roadmap:
+
+- **Direct Docking Simulations**: Integrate in-silico simulations directly within the agentic loop to transform hypotheses into predictive scores.
+- **Agent Development Kit (ADK)**: Transition to the ADK framework to leverage more comprehensive orchestration and modularity.
+- **Pilot Beta Tests**: Collaborate with geneticists and rare disease researchers to validate the platform's utility in real-world research scenarios.
+- **Scale Data Sources**: Expand the agent pipeline to include more specialized biomedical repositories and real-world evidence (RWE) data.
