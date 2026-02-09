@@ -145,6 +145,14 @@ const App: React.FC = () => {
           <p className="text-[10px] font-medium text-slate-400 text-center uppercase tracking-widest">
             Powered by Google gemini, made for Google Deepmind 2026 Gemini Hackathon
           </p>
+          <a
+            href="https://devpost.com/software/orphafold"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[9px] font-bold text-[#0061ff] hover:underline uppercase tracking-tighter"
+          >
+            View Devpost Submission
+          </a>
         </div>
       </footer>
     </div>

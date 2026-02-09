@@ -50,7 +50,7 @@ We utilize **Gemini 3** with a large context window and **Thinking Config (Think
 Maps the epidemiological landscape. It synthesizes prevalence, inheritance patterns, and the hierarchical classification of the disease.
 
 ### 🧪 Bio-Mechanism Agent
-The "structural brain" of the system. It connects the disease to UniProt entries and retrieves **AlphaFold 3D protein structures**. It analyzes molecular functions, functional domains (Pfam/InterPro), and signaling pathways.
+The "structural brain" of the system. It connects the disease to UniProt entries and retrieves **AlphaFold 3D protein structures** from AlphaFold DB API. It analyzes molecular functions, functional domains (Pfam/InterPro), and signaling pathways.
 
 ### 🔬 Discovery Agent
 Scans the research landscape. It synthesizes literature reviews and maps active recruitment pipelines from ClinicalTrials.gov. It also handles **Cross-Disease Insights**, identifying shared mechanisms between rare and common pathologies.

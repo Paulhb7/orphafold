@@ -1,7 +1,3 @@
-<div align="center">
-
-<img width="500" alt="OrphaFold Hero" src="documentation/Orphafold.jpeg" />
-
 # 🧬 OrphaFold
 
 **AI-powered research platform for rare diseases**
@@ -16,11 +12,15 @@ Multi-agent architecture • Biomedical APIs • Comprehensive reports
 [![PubMed](https://img.shields.io/badge/Data-PubMed-red?style=for-the-badge)](https://pubmed.ncbi.nlm.nih.gov/)
 [![ClinVar](https://img.shields.io/badge/Data-ClinVar-green?style=for-the-badge)](https://www.ncbi.nlm.nih.gov/clinvar/)
 
-[Quick Start](#-installation) • [Architecture](documentation/architecture.md) • [Devpost Submission](Devpost.md)
+[Quick Start](#-installation) • [Architecture](documentation/architecture.md) • [Devpost Submission](https://devpost.com/software/orphafold)
 
 </div>
 
-[![Demo Video](https://img.youtube.com/vi/W7CqQGy8dt0/maxresdefault.jpg)](https://youtu.be/W7CqQGy8dt0)
+<div align="center">
+  <a href="https://youtu.be/W7CqQGy8dt0">
+    <img src="https://img.youtube.com/vi/W7CqQGy8dt0/maxresdefault.jpg" width="500" alt="OrphaFold Demo Video" />
+  </a>
+</div>
 
 # OrphaFold: Deep Structural Search for Orphan Diseases
 
@@ -33,10 +33,9 @@ OrphaFold is an AI-powered platform designed to accelerate research into orphan 
 
 Today, 300 million people live with a rare disease. Yet, **95% of these 7,000+ conditions have no approved treatment**. This is largely driven by a chronic lack of funding, economic barriers, and fragmented knowledge trapped in silos.
 
-OrphaFold serves as a **technical demonstrator** to bridge this gap through **Structural Intelligence**:
-- **Accelerating Synthesis**: Compressing literature review by orchestrating specialized agents.
-- **Mechanics-First**: Using protein structures (AlphaFold) as a key baseline for discovery.
-- **Democratizing Repurposing**: Identifying hidden connections between existing drugs and rare proteins.
+- **Structural Intelligence**: Using protein structures (AlphaFold) as a key baseline for discovery.
+- **Binding Pocket Analysis**: Performing comparative analysis of protein binding pockets and 3D folds.
+- **Democratizing Repurposing**: Identifying hidden connections between existing drugs and rare proteins through structural homology.
 
 ## 📸 Interface Preview
 
@@ -76,9 +75,9 @@ OrphaFold orchestrates a 4-agent pipeline to analyze orphan pathologies from mul
 *   **Output:** Active trials, synthesized bibliography, and cross-disease insights.
 
 ### 4. 💊 Drug Repurposing Agent (The Synthesis Catalyst)
-*   **Purpose:** Proposes therapeutic candidates by bridging mechanism overlap (On-Demand).
-*   **APIs & Tools:** DrugBank, ChEMBL, Reasoning Engine (thinking budget).
-*   **Output:** In-silico repurposing hypotheses with feasibility scores and validation steps.
+*   **Purpose:** Proposes therapeutic candidates by bridging mechanism overlap via **Structural Homology** (On-Demand).
+*   **APIs & Tools:** DrugBank, ChEMBL, Reasoning Engine (thinking budget), 3D Binding Pocket analysis.
+*   **Output:** In-silico repurposing hypotheses with feasibility scores based on 3D fold similarity and catalytic site mapping.
 
 ---
 
@@ -88,8 +87,8 @@ OrphaFold orchestrates a 4-agent pipeline to analyze orphan pathologies from mul
 2.  **API Enrichment:** The system acts as a "Pre-Flight" layer, simultaneously querying:
     *   *Orphanet, OMIM, UniProt, NCBI Gene, ClinVar, PubMed.*
 3.  **Agent Orchestration:** The gathered context is fed into the Multi-Agent System powered by **Gemini 1.5 Pro**.
-4.  **Synthesis:** The agents reason over the data, perform additional Google Searches for missing info, and generate a structured report.
-5.  **Visualization:** The frontend renders interactive molecular structures (pdb), clinical data cards, and research timelines.
+4.  **Synthesis & Homology:** The agents reason over the data, perform structural homology analysis to identify shared binding motifs, and generate a structured report.
+5.  **Visualization:** The frontend renders interactive molecular structures (pdb), clinical data cards, and research timelines directly from the AlphaFold DB.
 
 ---
 

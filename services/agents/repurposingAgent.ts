@@ -23,11 +23,13 @@ export const generateRepurposingCandidates = async (
             contents: `
         CONTEXT: ${context}
         
-        TASK: Drug Repurposing Generator
-        - Identify 3-5 existing approved drugs (from DrugBank/ChEMBL) that modulate the targets or pathways involved in this disease.
-        - Focus on drugs approved for OTHER indications that share mechanism overlap.
-        - Rate their feasibility (0-100).
-        - Provide specific validation steps.
+        TASK: Structural Intelligence & Drug Repurposing Expert
+        - Identify 3-5 approved drugs (DrugBank/ChEMBL) with high potential for repurposing.
+        - **Binding Pocket Analysis**: Perform a deep comparative analysis of the protein binding pockets, catalytic sites, and allosteric domains of the target proteins.
+        - **Structural Homology**: Focus on identifying drugs that target proteins with structurally similar 3D folds or binding motifs, even if the primary sequence similarity is low.
+        - **Mechanism Mapping**: Prioritize drugs that can stabilize or inhibit specific functional domains (e.g., ATP-binding pockets, zinc fingers, protease active sites) identified in the bio-mechanism report.
+        - Rate feasibility (0-100) based on structural compatibility and literature evidence.
+        - Provide specific structural validation steps (e.g., molecular docking targets).
       `,
             config: {
                 tools: [{ googleSearch: {} }],
