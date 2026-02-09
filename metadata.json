@@ -1,0 +1,5 @@
+{
+  "name": "Orphafold: Deep structural search for rare diseases",
+  "description": "A deep-reasoning tool that bridges the gap between orphan diseases and protein structural biology using Gemini's search grounding and AlphaFold DB insights.",
+  "requestFramePermissions": []
+}
