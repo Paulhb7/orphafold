@@ -102,9 +102,6 @@ const App: React.FC = () => {
             <a href="https://github.com/Paulhb7/orphafold" target="_blank" rel="noreferrer" className="p-2 text-slate-400 hover:text-[#001a3d] transition-colors">
               <Github size={20} />
             </a>
-            <button className="bg-[#001a3d] text-white px-4 py-2 rounded-xl text-xs font-bold transition-all hover:bg-black active:scale-95 shadow-lg shadow-blue-900/10 hidden md:flex items-center gap-2">
-              <Share2 size={14} /> Share
-            </button>
           </div>
         </div>
       </nav>
