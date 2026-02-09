@@ -4,13 +4,16 @@
 
 # OrphaFold: Deep Structural Search for Orphan Diseases
 
+> [!NOTE]
+> OrphaFold is a **Research Prototype and Proof of Concept (PoC)**. It is intended for professional researchers and geneticists as a decision-support tool, not as a clinical system.
+
 OrphaFold is an AI-powered platform designed to accelerate research into orphan diseases by combining real-time API enrichment with advanced Multi-Agent orchestration and structural biology.
 
 ## 👁️ The "Why" (Vision)
 
-Today, 300 million people live with a rare disease. Yet, **95% of these 7,000+ conditions have no approved treatment**. This "Data Desert" is caused by fragmented knowledge trapped in silos and a lack of mechanistic baselines for discovery.
+Today, 300 million people live with a rare disease. Yet, **95% of these 7,000+ conditions have no approved treatment**. This is largely driven by a chronic lack of funding, economic barriers, and fragmented knowledge trapped in silos.
 
-OrphaFold bridges this gap through **Structural Intelligence**:
+OrphaFold serves as a **technical demonstrator** to bridge this gap through **Structural Intelligence**:
 - **Accelerating Synthesis**: Compressing literature review by orchestrating specialized agents.
 - **Mechanics-First**: Using protein structures (AlphaFold) as a key baseline for discovery.
 - **Democratizing Repurposing**: Identifying hidden connections between existing drugs and rare proteins.

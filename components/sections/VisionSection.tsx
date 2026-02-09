@@ -7,13 +7,13 @@ const VisionSection: React.FC = () => {
             {/* Header */}
             <div className="mb-20 text-center">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest mb-6">
-                    <Eye size={12} /> Our Vision
+                    <Eye size={12} /> Our Vision • Prototype PoC
                 </div>
                 <h2 className="text-6xl font-black mb-8 tracking-tighter text-[#001a3d] leading-[0.9]">
-                    Accelerating the <span className="text-[#0061ff]">Odyssey</span> of Rare Disease Research.
+                    A Research <span className="text-[#0061ff]">Prototype</span> to Accelerate the Orphan Odyssey.
                 </h2>
                 <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-3xl mx-auto">
-                    We are building a future where no disease is too rare to be understood, and no patient is left in the dark.
+                    OrphaFold is a proof-of-concept designed to help researchers navigate the complex landscape of rare disease data.
                 </p>
             </div>
 
@@ -23,7 +23,7 @@ const VisionSection: React.FC = () => {
                     <div className="space-y-6">
                         <h3 className="text-3xl font-black text-[#001a3d] tracking-tighter uppercase">The "Data Desert" Problem</h3>
                         <p className="text-slate-600 leading-relaxed font-medium">
-                            Today, 300 million people live with a rare disease. Yet, 95% of these 7,000+ conditions have no approved treatment.
+                            Today, 300 million people live with a rare disease. Yet, 95% of these 7,000+ conditions have no approved treatment due to a massive lack of funding and structural research barriers.
                         </p>
                         <ul className="space-y-4">
                             {[
@@ -63,7 +63,7 @@ const VisionSection: React.FC = () => {
                     <div className="relative z-10 max-w-3xl">
                         <h3 className="text-4xl font-black tracking-tighter uppercase mb-8">Our Approach: <span className="text-[#00f5d4]">Structural Intelligence</span></h3>
                         <p className="text-lg text-white/70 font-medium leading-relaxed mb-10">
-                            OrphaFold leverages the intersection of large language models and structural biology to bridge the therapeutic gap. By grounding AI in real-time genomic data and AlphaFold predictions, we turn search into synthesis.
+                            OrphaFold acts as a <strong>Proof of Concept (PoC)</strong> that leverages the intersection of large language models and structural biology to provide researchers with a unified tool for exploration.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
