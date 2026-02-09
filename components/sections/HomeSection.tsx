@@ -44,7 +44,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
 
             <div className="text-center mb-16 pt-8 no-print">
                 <h2 className="text-4xl font-black mb-6 tracking-tighter text-[#001a3d] leading-tight">
-                    A <span className="text-[#0061ff]">Multi-Agent Research Catalyst</span> for Rare Diseases.
+                    <span className="text-[#0061ff]">Multi-Agent Research Catalyst</span> for Orphan Diseases.
                 </h2>
 
                 <form onSubmit={handleSearch} className="relative group w-full max-w-5xl mx-auto mb-10">
@@ -55,7 +55,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
                             type="text"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
-                            placeholder="Search orphan pathology (e.g. Fabry disease, Pompe disease, Gaucher disease)..."
+                            placeholder="Search orphan pathology (e.g. Amyotrophic Lateral Sclerosis, Gaucher disease, Huntington disease)..."
                             className="w-full bg-transparent border-none outline-none px-5 py-3 text-[#001a3d] font-semibold text-base placeholder:text-slate-300"
                             disabled={loading}
                         />
@@ -73,7 +73,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
                 {!loading && (
                     <div className="flex flex-wrap justify-center gap-2 mb-6">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest self-center mr-2">Try:</span>
-                        {["Duchenne Muscular Dystrophy", "Fabry Disease", "Pompe Disease", "Gaucher Disease", "Huntington Disease"].map((disease) => (
+                        {["Duchenne Muscular Dystrophy", "Amyotrophic Lateral Sclerosis", "Gaucher Disease", "Huntington Disease"].map((disease) => (
                             <button
                                 key={disease}
                                 onClick={() => setQuery(disease)}
@@ -150,22 +150,22 @@ const HomeSection: React.FC<HomeSectionProps> = ({
 
                                 <div className="relative pt-2">
                                     <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-[1px] bg-slate-200"></div>
-                                    <div className="bg-[#001a3d] border border-white/10 rounded-xl p-4 shadow-xl flex flex-col md:flex-row items-center gap-4 group">
-                                        <div className="p-3 rounded-xl bg-[#0061ff] text-white group-hover:scale-105 transition-transform shrink-0">
+                                    <div className="bg-[#001a3d]/85 backdrop-blur-md border border-slate-200/20 rounded-xl p-4 shadow-xl flex flex-col md:flex-row items-center gap-4 group">
+                                        <div className="p-3 rounded-xl bg-[#0061ff] text-white group-hover:scale-105 transition-transform shrink-0 shadow-lg shadow-[#0061ff]/20">
                                             <Sparkles size={20} />
                                         </div>
                                         <div className="text-center md:text-left flex-1">
                                             <h4 className="text-[11px] font-black mb-1 uppercase tracking-tight text-white flex items-center gap-2 justify-center md:justify-start">
                                                 Drug Repurposing Agent
-                                                <span className="px-2 py-0.5 bg-white/10 text-[#00f5d4] rounded-full text-[8px]">The Synthesis Catalyst</span>
+                                                <span className="px-2 py-0.5 bg-[#00f5d4]/20 text-[#00f5d4] border border-[#00f5d4]/30 rounded-full text-[8px] font-bold">The Synthesis Catalyst</span>
                                             </h4>
-                                            <p className="text-[10px] text-slate-400 leading-snug font-medium">
+                                            <p className="text-[10px] text-white/70 leading-snug font-medium">
                                                 Bridge mechanism overlap to identify FDA-approved drugs for experimental validation.
                                             </p>
                                         </div>
                                         <div className="flex flex-wrap justify-center md:justify-end gap-1 shrink-0">
                                             {["DrugBank", "ChEMBL", "Feasibility Score"].map((tool, tIdx) => (
-                                                <span key={tIdx} className="px-1.5 py-0.5 bg-white/5 text-white/40 rounded text-[8px] font-bold uppercase tracking-wider">
+                                                <span key={tIdx} className="px-1.5 py-0.5 bg-white/5 text-white/40 border border-white/10 rounded text-[8px] font-bold uppercase tracking-wider">
                                                     {tool}
                                                 </span>
                                             ))}

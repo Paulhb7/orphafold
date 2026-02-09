@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Home, FileText, ScrollText, Github, Share2 } from 'lucide-react';
+import { Home, FileText, ScrollText, Github, Share2, Eye } from 'lucide-react';
 import { useDeepSearch } from './hooks/useDeepSearch';
 
 import HomeSection from './components/sections/HomeSection';
 import EthicsSection from './components/sections/EthicsSection';
 import DocumentationSection from './components/sections/DocumentationSection';
+import VisionSection from './components/sections/VisionSection';
 import ReportSection from './components/sections/ReportSection';
 import { ScientificCanvas } from './components/ScientificBackground';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'mission' | 'documentation' | 'ethics'>('home');
+  const [view, setView] = useState<'home' | 'vision' | 'documentation' | 'ethics'>('home');
   const {
     query,
     setQuery,
@@ -80,6 +81,7 @@ const App: React.FC = () => {
           <div className="flex items-center gap-1 bg-slate-100/50 p-1 rounded-full border border-slate-200/50 no-print">
             {[
               { id: 'home', label: 'Research', icon: <Home size={14} /> },
+              { id: 'vision', label: 'Vision', icon: <Eye size={14} /> },
               { id: 'documentation', label: 'How it Works', icon: <FileText size={14} /> },
               { id: 'ethics', label: 'Ethics', icon: <ScrollText size={14} /> },
             ].map((item) => (
@@ -136,6 +138,7 @@ const App: React.FC = () => {
 
         {view === 'ethics' && <EthicsSection />}
         {view === 'documentation' && <DocumentationSection />}
+        {view === 'vision' && <VisionSection />}
 
       </main>
 
