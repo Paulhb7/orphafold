@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 export const MODEL_NAME = 'gemini-3-pro-preview';
 export const THINKING_BUDGET = 8192;
 
-export const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+export const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
 export const runAgent = async (
     agentName: string,

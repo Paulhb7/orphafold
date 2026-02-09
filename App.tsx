@@ -140,18 +140,10 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white z-10 relative py-12">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 transition-all">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Powered by</span>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-slate-600 text-xs">Google Gemini</span>
-              <span className="font-bold text-slate-600 text-xs">+</span>
-              <span className="font-bold text-slate-600 text-xs">AlphaFold</span>
-            </div>
-          </div>
-          <p className="text-[10px] font-medium text-slate-400 text-center md:text-right">
-            &copy; 2025 Orphafold Research Collective. Open Source Intelligence for Rare Diseases.
+      <footer className="border-t border-slate-200 bg-white z-10 relative py-8">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center gap-2">
+          <p className="text-[10px] font-medium text-slate-400 text-center uppercase tracking-widest">
+            Powered by Google gemini, made for Google Deepmind 2026 Gemini Hackathon
           </p>
         </div>
       </footer>

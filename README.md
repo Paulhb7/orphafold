@@ -73,7 +73,7 @@ OrphaFold orchestrates a Multi-Agent System (MAS) to analyze user queries from d
     *   Create a `.env.local` file in the root directory.
     *   Add your Gemini API Key:
         ```env
-        VITE_GEMINI_API_KEY=your_api_key_here
+        GEMINI_API_KEY=your_api_key_here
         ```
 
 4.  **Run Locally:**

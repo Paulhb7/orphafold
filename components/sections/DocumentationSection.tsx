@@ -11,50 +11,6 @@ const DocumentationSection: React.FC = () => {
 
             <div className="space-y-20">
 
-                {/* ARCHITECTURE OVERVIEW */}
-                <div className="space-y-8">
-                    <div className="text-center">
-                        <h3 className="text-3xl font-black text-[#001a3d] tracking-tighter uppercase mb-2">System Architecture</h3>
-                        <p className="text-slate-400 font-bold text-xs uppercase tracking-widest">Multi-Agent Orchestration Pipeline</p>
-                    </div>
-
-                    <div className="bg-[#001a3d] rounded-[32px] p-10 text-white space-y-8">
-                        <div className="space-y-4">
-                            <h4 className="text-lg font-black text-[#00f5d4] uppercase tracking-widest">Core Stack</h4>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                {[
-                                    { label: "LLM", value: "Gemini 3 Pro Preview" },
-                                    { label: "Thinking Budget", value: "8,192 tokens" },
-                                    { label: "Framework", value: "React + TypeScript" },
-                                    { label: "API Pattern", value: "Parallel Agent Execution" },
-                                ].map((item, i) => (
-                                    <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4">
-                                        <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block mb-1">{item.label}</span>
-                                        <span className="text-sm font-bold text-white">{item.value}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h4 className="text-lg font-black text-[#00f5d4] uppercase tracking-widest">Execution Flow</h4>
-                            <div className="flex flex-wrap items-center gap-3 text-sm">
-                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">User Query</span>
-                                <ArrowRight size={16} className="text-[#00f5d4]" />
-                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">Real-time API Enrichment</span>
-                                <ArrowRight size={16} className="text-[#00f5d4]" />
-                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">3 Parallel Agents</span>
-                                <ArrowRight size={16} className="text-[#00f5d4]" />
-                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">Structured JSON Output</span>
-                            </div>
-                            <p className="text-white/60 text-xs font-medium leading-relaxed">
-                                Before invoking the LLM, Orphafold makes <strong className="text-white/80">direct REST API calls</strong> to UniProt, NCBI Gene, ClinVar, and PubMed to gather ground-truth data.
-                                This data is injected into the agent context to reduce hallucinations and anchor responses in verifiable sources.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 {/* AGENT DETAILS */}
                 <div className="space-y-8">
                     <div className="text-center">
@@ -273,31 +229,75 @@ const DocumentationSection: React.FC = () => {
                         <p className="text-slate-400 font-bold text-xs uppercase tracking-widest">Public Bio-Informatics Infrastructure</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            { name: "Orphanet", icon: <Database size={18} />, desc: "REST API (XML). Disease classifications, prevalence data, and OrphaCode identifiers.", api: "api.orphadata.com" },
-                            { name: "OMIM", icon: <Binary size={18} />, desc: "E-utilities API. Mendelian inheritance and phenotype-genotype correlation data.", api: "eutils.ncbi.nlm.nih.gov" },
-                            { name: "UniProt", icon: <Library size={18} />, desc: "REST API (JSON). Protein sequence and functional information for target identification.", api: "rest.uniprot.org" },
-                            { name: "NCBI Gene", icon: <Dna size={18} />, desc: "E-utilities API. Gene database with genomic coordinates and summaries.", api: "eutils.ncbi.nlm.nih.gov" },
-                            { name: "ClinVar", icon: <Target size={18} />, desc: "E-utilities API. Genomic variations with HGVS mutations and clinical significance.", api: "eutils.ncbi.nlm.nih.gov" },
-                            { name: "PubMed", icon: <Library size={18} />, desc: "E-utilities API. MEDLINE abstracts for real-time evidence synthesis.", api: "eutils.ncbi.nlm.nih.gov" },
-                            { name: "AlphaFold DB", icon: <Layers size={18} />, desc: "200M+ protein structure predictions. Embedded 3D viewer via Mol* (PDBe).", api: "alphafold.ebi.ac.uk" },
-                            { name: "ClinicalTrials.gov", icon: <FlaskConical size={18} />, desc: "Clinical studies database. Pipeline visibility via Google Search grounding.", api: "clinicaltrials.gov" },
-                            { name: "DrugBank & ChEMBL", icon: <Beaker size={18} />, desc: "Drug and target databases. Used for repurposing hypothesis generation.", api: "via Google Search" }
-                        ].map((src, i) => (
-                            <div key={i} className="bg-[#f8fafc] border border-slate-100 p-6 rounded-2xl group hover:bg-white hover:shadow-lg hover:border-blue-100 transition-all duration-300">
-                                <div className="flex items-center gap-4 mb-3">
-                                    <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-blue-500 shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                    <div className="bg-white border border-slate-200 rounded-[32px] p-8 shadow-sm">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                            {[
+                                { name: "Orphanet", icon: <Database size={18} />, desc: "REST API (XML). Disease classifications, prevalence data.", api: "api.orphadata.com" },
+                                { name: "OMIM", icon: <Binary size={18} />, desc: "E-utilities API. Phenotype-genotype correlation data.", api: "eutils.ncbi.nlm.nih.gov" },
+                                { name: "UniProt", icon: <Library size={18} />, desc: "REST API (JSON). Protein sequence and functional info.", api: "rest.uniprot.org" },
+                                { name: "NCBI Gene", icon: <Dna size={18} />, desc: "E-utilities API. Gene database with genomic coordinates.", api: "eutils.ncbi.nlm.nih.gov" },
+                                { name: "ClinVar", icon: <Target size={18} />, desc: "E-utilities API. Genomic variations and clinical significance.", api: "eutils.ncbi.nlm.nih.gov" },
+                                { name: "PubMed", icon: <Library size={18} />, desc: "E-utilities API. Evidence synthesis from MEDLINE.", api: "eutils.ncbi.nlm.nih.gov" },
+                                { name: "AlphaFold DB", icon: <Layers size={18} />, desc: "200M+ protein structure predictions.", api: "alphafold.ebi.ac.uk" },
+                                { name: "ClinicalTrials.gov", icon: <FlaskConical size={18} />, desc: "Clinical studies database.", api: "clinicaltrials.gov" },
+                                { name: "DrugBank & ChEMBL", icon: <Beaker size={18} />, desc: "Drug and target identification databases.", api: "via Google Search" }
+                            ].map((src, i) => (
+                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
+                                    <div className="w-10 h-10 bg-slate-50 rounded-lg flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all shrink-0">
                                         {src.icon}
                                     </div>
-                                    <div className="flex-1">
-                                        <h5 className="text-sm font-black text-[#001a3d] tracking-tight uppercase">{src.name}</h5>
-                                        <span className="text-[9px] font-mono text-slate-400">{src.api}</span>
+                                    <div className="space-y-1">
+                                        <h5 className="text-[11px] font-black text-[#001a3d] uppercase tracking-wider">{src.name}</h5>
+                                        <p className="text-[10px] text-slate-500 font-medium leading-snug">{src.desc}</p>
+                                        <div className="text-[8px] font-mono text-slate-400 pt-1">{src.api}</div>
                                     </div>
                                 </div>
-                                <p className="text-xs text-slate-500 font-medium leading-relaxed">{src.desc}</p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* ARCHITECTURE OVERVIEW (Moved to last) */}
+                <div className="space-y-8">
+                    <div className="text-center">
+                        <h3 className="text-3xl font-black text-[#001a3d] tracking-tighter uppercase mb-2">System Architecture</h3>
+                        <p className="text-slate-400 font-bold text-xs uppercase tracking-widest">Multi-Agent Orchestration Pipeline</p>
+                    </div>
+
+                    <div className="bg-[#001a3d] rounded-[32px] p-10 text-white space-y-8">
+                        <div className="space-y-4">
+                            <h4 className="text-lg font-black text-[#00f5d4] uppercase tracking-widest">Core Stack</h4>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                {[
+                                    { label: "LLM", value: "Gemini 3 Pro Preview" },
+                                    { label: "Thinking Budget", value: "8,192 tokens" },
+                                    { label: "Framework", value: "React + TypeScript" },
+                                    { label: "API Pattern", value: "Parallel Agent Execution" },
+                                ].map((item, i) => (
+                                    <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                                        <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block mb-1">{item.label}</span>
+                                        <span className="text-sm font-bold text-white">{item.value}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+
+                        <div className="space-y-4">
+                            <h4 className="text-lg font-black text-[#00f5d4] uppercase tracking-widest">Execution Flow</h4>
+                            <div className="flex flex-wrap items-center gap-3 text-sm">
+                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">User Query</span>
+                                <ArrowRight size={16} className="text-[#00f5d4]" />
+                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">Real-time API Enrichment</span>
+                                <ArrowRight size={16} className="text-[#00f5d4]" />
+                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">3 Parallel Agents</span>
+                                <ArrowRight size={16} className="text-[#00f5d4]" />
+                                <span className="bg-white/10 px-4 py-2 rounded-xl font-bold">Structured JSON Output</span>
+                            </div>
+                            <p className="text-white/60 text-xs font-medium leading-relaxed">
+                                Before invoking the LLM, Orphafold makes <strong className="text-white/80">direct REST API calls</strong> to UniProt, NCBI Gene, ClinVar, and PubMed to gather ground-truth data.
+                                This data is injected into the agent context to reduce hallucinations and anchor responses in verifiable sources.
+                            </p>
+                        </div>
                     </div>
                 </div>
 

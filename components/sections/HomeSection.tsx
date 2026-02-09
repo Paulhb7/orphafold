@@ -56,15 +56,15 @@ const HomeSection: React.FC<HomeSectionProps> = ({
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="Search orphan pathology (e.g. Fabry disease, Pompe disease, Gaucher disease)..."
-                            className="w-full bg-transparent border-none outline-none px-5 py-5 text-[#001a3d] font-semibold text-lg placeholder:text-slate-300"
+                            className="w-full bg-transparent border-none outline-none px-5 py-3 text-[#001a3d] font-semibold text-base placeholder:text-slate-300"
                             disabled={loading}
                         />
                         <button
                             type="submit"
                             disabled={loading || !query.trim()}
-                            className="bg-[#001a3d] text-white px-10 py-5 rounded-[16px] font-bold text-sm transition-all flex items-center gap-2 hover:bg-black active:scale-95 disabled:opacity-50"
+                            className="bg-[#001a3d] text-white px-8 py-3 rounded-[14px] font-bold text-xs transition-all flex items-center gap-2 hover:bg-black active:scale-95 disabled:opacity-50"
                         >
-                            {loading ? <Loader2 className="animate-spin" size={18} /> : "Run Agents"}
+                            {loading ? <Loader2 className="animate-spin" size={16} /> : "Run Agents"}
                         </button>
                     </div>
                 </form>
@@ -87,49 +87,90 @@ const HomeSection: React.FC<HomeSectionProps> = ({
 
                 {!loading && (
                     <div className="space-y-6">
-                        <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 border-2 border-slate-200 rounded-[24px] p-6 max-w-4xl mx-auto shadow-sm">
-                            <div className="text-center mb-6">
-                                <h3 className="text-sm font-black text-slate-400 uppercase tracking-wider flex items-center justify-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-[#0061ff] animate-pulse"></span>
-                                    3 Agents Working Together
-                                    <span className="w-2 h-2 rounded-full bg-[#0061ff] animate-pulse"></span>
+                        <div className="bg-white/40 backdrop-blur-sm border border-slate-200/60 rounded-[28px] p-6 max-w-5xl mx-auto shadow-lg shadow-blue-900/5">
+                            <div className="text-center mb-8">
+                                <h3 className="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] flex flex-col items-center gap-2">
+                                    <span className="flex items-center gap-4">
+                                        <span className="h-[1px] w-8 bg-slate-200"></span>
+                                        Science-First Architecture
+                                        <span className="h-[1px] w-8 bg-slate-200"></span>
+                                    </span>
+                                    <span className="text-[#001a3d] normal-case text-xs font-semibold tracking-normal mt-1">
+                                        4 agents gathering research, clinical, genomic and proteic data to generate <span className="text-[#0061ff]">precise in-silico repurposing hypotheses</span>
+                                    </span>
                                 </h3>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                {[
-                                    { icon: <Dna size={18} />, title: "Biology Agent", desc: "AlphaFold + UniProt structural mapping" },
-                                    { icon: <Stethoscope size={18} />, title: "Clinical Agent", desc: "ClinicalTrials.gov pipeline scanning" },
-                                    { icon: <Sparkles size={18} />, title: "Discovery Agent", desc: "In-silico repurposing hypotheses" }
-                                ].map((step, idx) => (
-                                    <div key={idx} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group text-center">
-                                        <div className="w-10 h-10 rounded-xl bg-slate-50 text-[#0061ff] flex items-center justify-center mb-3 group-hover:scale-105 group-hover:bg-[#001a3d] group-hover:text-white transition-all mx-auto">
-                                            {step.icon}
-                                        </div>
-                                        <h4 className="text-xs font-black mb-1 uppercase tracking-tight text-[#001a3d]">{step.title}</h4>
-                                        <p className="text-[10px] text-slate-400 leading-snug font-medium">{step.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
 
-                            <div className="mt-6 pt-6 border-t border-slate-200">
-                                <div className="text-center mb-4">
-                                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Powered by Data Sources</h4>
-                                </div>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 max-w-3xl mx-auto">
+                            <div className="space-y-3">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                                     {[
-                                        { id: 'orphanet', icon: <Database size={12} />, name: 'Orphanet', desc: 'Rare Disease Portal' },
-                                        { id: 'uniprot', icon: <Dna size={12} />, name: 'UniProt', desc: 'Protein Knowledge' },
-                                        { id: 'ncbigene', icon: <Binary size={12} />, name: 'NCBI Gene', desc: 'Genomic Context' },
-                                        { id: 'clinvar', icon: <Target size={12} />, name: 'ClinVar', desc: 'Genomic Variants' },
-                                        { id: 'alphafold', icon: <Layers size={12} />, name: 'AlphaFold', desc: '3D Structures' },
-                                        { id: 'pubmed', icon: <Library size={12} />, name: 'PubMed', desc: 'Research Papers' }
-                                    ].map(src => (
-                                        <div key={src.id} className="flex flex-col items-center p-3 bg-white/70 border border-slate-100 rounded-xl hover:shadow-sm transition-all">
-                                            <div className="text-blue-500 mb-1">{src.icon}</div>
-                                            <span className="text-[9px] font-black uppercase text-[#001a3d] tracking-wider text-center">{src.name}</span>
-                                            <span className="text-[7px] text-slate-400 font-bold uppercase text-center">{src.desc}</span>
+                                        {
+                                            icon: <Stethoscope size={18} />,
+                                            color: "text-emerald-600",
+                                            bg: "bg-emerald-50",
+                                            title: "Clinical Grounding",
+                                            objective: "Retrieve prevalence, inheritance & pathogenic variants.",
+                                            tools: ["Orphanet", "OMIM", "ClinVar"]
+                                        },
+                                        {
+                                            icon: <Dna size={18} />,
+                                            color: "text-blue-600",
+                                            bg: "bg-blue-50",
+                                            title: "Bio-Mechanism",
+                                            objective: "Map molecular machinery, pathways & structural confidence.",
+                                            tools: ["UniProt", "AlphaFold", "pLDDT"]
+                                        },
+                                        {
+                                            icon: <Library size={18} />,
+                                            color: "text-indigo-600",
+                                            bg: "bg-indigo-50",
+                                            title: "Discovery Agent",
+                                            objective: "Scan research landscape & shared biological models.",
+                                            tools: ["ClinicalTrials.gov", "PubMed"]
+                                        }
+                                    ].map((agent, idx) => (
+                                        <div key={idx} className="bg-white border border-slate-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group flex flex-col items-center text-center">
+                                            <div className={`p-3 rounded-xl ${agent.bg} ${agent.color} mb-3 group-hover:scale-105 transition-transform`}>
+                                                {agent.icon}
+                                            </div>
+                                            <h4 className="text-[11px] font-black mb-1 uppercase tracking-tight text-[#001a3d]">{agent.title}</h4>
+                                            <p className="text-[10px] text-slate-500 leading-snug mb-3 font-medium">
+                                                {agent.objective}
+                                            </p>
+                                            <div className="flex flex-wrap justify-center gap-1 mt-auto">
+                                                {agent.tools.map((tool, tIdx) => (
+                                                    <span key={tIdx} className="px-1.5 py-0.5 bg-slate-50 text-slate-400 rounded text-[8px] font-bold uppercase tracking-wider">
+                                                        {tool}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     ))}
+                                </div>
+
+                                <div className="relative pt-2">
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-[1px] bg-slate-200"></div>
+                                    <div className="bg-[#001a3d] border border-white/10 rounded-xl p-4 shadow-xl flex flex-col md:flex-row items-center gap-4 group">
+                                        <div className="p-3 rounded-xl bg-[#0061ff] text-white group-hover:scale-105 transition-transform shrink-0">
+                                            <Sparkles size={20} />
+                                        </div>
+                                        <div className="text-center md:text-left flex-1">
+                                            <h4 className="text-[11px] font-black mb-1 uppercase tracking-tight text-white flex items-center gap-2 justify-center md:justify-start">
+                                                Drug Repurposing Agent
+                                                <span className="px-2 py-0.5 bg-white/10 text-[#00f5d4] rounded-full text-[8px]">The Synthesis Catalyst</span>
+                                            </h4>
+                                            <p className="text-[10px] text-slate-400 leading-snug font-medium">
+                                                Bridge mechanism overlap to identify FDA-approved drugs for experimental validation.
+                                            </p>
+                                        </div>
+                                        <div className="flex flex-wrap justify-center md:justify-end gap-1 shrink-0">
+                                            {["DrugBank", "ChEMBL", "Feasibility Score"].map((tool, tIdx) => (
+                                                <span key={tIdx} className="px-1.5 py-0.5 bg-white/5 text-white/40 rounded text-[8px] font-bold uppercase tracking-wider">
+                                                    {tool}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
