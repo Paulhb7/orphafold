@@ -2,42 +2,42 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# OrphaFold: Deep Structural Search for Rare Diseases
+# OrphaFold: Deep Structural Search for Orphan Diseases
 
-OrphaFold is an AI-powered platform designed to accelerate research into rare diseases by combining real-time API enrichment with advanced LLM reasoning. It leverages Google's Gemini 1.5 Pro to synthesize data from Orphanet, OMIM, UniProt, NCBI, and ClinVar.
+OrphaFold is an AI-powered platform designed to accelerate research into orphan diseases by combining real-time API enrichment with advanced Multi-Agent orchestration and structural biology.
 
-## 🧬 What are the Agents?
+## 👁️ The "Why" (Vision)
 
-OrphaFold orchestrates a Multi-Agent System (MAS) to analyze user queries from different biological perspectives. Each agent specializes in a specific domain:
+Today, 300 million people live with a rare disease. Yet, **95% of these 7,000+ conditions have no approved treatment**. This "Data Desert" is caused by fragmented knowledge trapped in silos and a lack of mechanistic baselines for discovery.
+
+OrphaFold bridges this gap through **Structural Intelligence**:
+- **Accelerating Synthesis**: Compressing literature review by orchestrating specialized agents.
+- **Mechanics-First**: Using protein structures (AlphaFold) as a key baseline for discovery.
+- **Democratizing Repurposing**: Identifying hidden connections between existing drugs and rare proteins.
+
+## 🧬 The Agent Architecture
+
+OrphaFold orchestrates a 4-agent pipeline to analyze orphan pathologies from multiple biological perspectives:
 
 ### 1. 🏥 Clinical Grounding Agent
-*   **Purpose:** Establishes the clinical baseline of the disease.
-*   **Capabilities:**
-    *   Retrieves prevalence data, inheritance patterns, and disease classifications from **Orphanet** and **OMIM**.
-    *   Cross-references data with real-time **Google Search** to ensure up-to-date clinical statistics.
-    *   Identifies validated pathogenic variants via **ClinVar**.
+*   **Purpose:** Establishes the clinical baseline using direct REST APIs.
+*   **APIs & Tools:** Orphanet (orphadata.com), OMIM (NCBI E-utilities), Google Search Grounding.
+*   **Output:** Prevalence, inheritance patterns, and disease classifications.
 
 ### 2. 🧪 Bio-Mechanism Agent
-*   **Purpose:** Uncovers the molecular machinery driving the disease.
-*   **Capabilities:**
-    *   Maps **UniProt** IDs to functional domains and signaling pathways.
-    *   Estimates structural confidence (pLDDT) and AlphaFold availability.
-    *   Assesses **druggability** of key protein targets (e.g., Small Molecule, Biologic).
-    *   Analyzes cellular vulnerabilities and tissue expression profiles.
+*   **Purpose:** Uncovers the molecular pathophysiology and structural machinery.
+*   **APIs & Tools:** UniProt, NCBI Gene, ClinVar, AlphaFold DB (3D Viewer).
+*   **Output:** Target proteins, functional domains, pLDDT confidence, and druggability assessments.
 
 ### 3. 🔬 Discovery Agent
-*   **Purpose:** Connects the disease to the broader research landscape.
-*   **Capabilities:**
-    *   Scans **ClinicalTrials.gov** for active recruitment and intervention status.
-    *   Performs structural homology searches to find shared mechanisms with other diseases.
-    *   Synthesizes a bibliography of key research papers from **PubMed**.
+*   **Purpose:** Connects the disease to the broader research and clinical landscape.
+*   **APIs & Tools:** PubMed (NCBI), ClinicalTrials.gov, structural homology search.
+*   **Output:** Active trials, synthesized bibliography, and cross-disease insights.
 
-### 4. 💊 Drug Repurposing Agent (On-Demand)
-*   **Purpose:** Proposes therapeutic candidates by bridging mechanism overlap.
-*   **Capabilities:**
-    *   Identifies FDA-approved drugs for *other* indications that might modulate the target pathways.
-    *   Scores candidates based on molecular feasibility and mechanism of action.
-    *   Provides specific validation steps for experimental verification.
+### 4. 💊 Drug Repurposing Agent (The Synthesis Catalyst)
+*   **Purpose:** Proposes therapeutic candidates by bridging mechanism overlap (On-Demand).
+*   **APIs & Tools:** DrugBank, ChEMBL, Reasoning Engine (thinking budget).
+*   **Output:** In-silico repurposing hypotheses with feasibility scores and validation steps.
 
 ---
 
