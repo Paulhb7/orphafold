@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="800" alt="OrphaFold Hero" src="documentation/Orphafold.jpeg" />
+<img width="500" alt="OrphaFold Hero" src="documentation/Orphafold.jpeg" />
 
 # 🧬 OrphaFold
 
@@ -48,8 +48,10 @@ OrphaFold serves as a **technical demonstrator** to bridge this gap through **St
 | <img src="documentation/report-hypothesis-lab.png" width="400" /> | <img src="documentation/report-research.png" width="400" /> |
 | **👁️ Project Vision** | **🧬 Structural Analysis** |
 | <img src="documentation/vision.png" width="400" /> | <img src="documentation/report-bio2.png" width="400" /> |
-| **🧪 Cross-Disease Insights** | **📚 Bibliography Management** |
-| <img src="documentation/report-hypothesis-lab2.png" width="400" /> | <img src="documentation/report-biblio.png" width="400" /> |
+| **🧪 Cross-Disease Insights** | **� Structural Proteomics (AlphaFold)** |
+| <img src="documentation/report-hypothesis-lab2.png" width="400" /> | <img src="documentation/report-bio4.png" width="400" /> |
+| **📚 Bibliography Management** | |
+| <img src="documentation/report-biblio.png" width="400" /> | |
 
 </div>
 
